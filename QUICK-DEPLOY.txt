@@ -1,0 +1,45 @@
+═══════════════════════════════════════════════════════
+  QUICK DEPLOYMENT INSTRUCTIONS - ACCOUNTING APP
+═══════════════════════════════════════════════════════
+
+🚀 FASTEST WAY TO DEPLOY:
+
+1. CLOSE this PowerShell window
+
+2. OPEN a NEW PowerShell window
+
+3. Run these commands:
+   cd f:\projects\accounting
+   .\deploy-to-cloudflare.ps1
+
+4. Follow the script prompts!
+
+═══════════════════════════════════════════════════════
+
+📝 What the script does:
+   ✓ Checks Git installation
+   ✓ Configures Git with your name/email
+   ✓ Builds your project
+   ✓ Commits all files
+   ✓ Pushes to GitHub
+   ✓ Provides Cloudflare setup instructions
+
+═══════════════════════════════════════════════════════
+
+🌐 After running the script:
+   1. Open https://dash.cloudflare.com/
+   2. Go to Workers & Pages → Pages
+   3. Click "Connect to Git"
+   4. Select your GitHub repo
+   5. Set build command: npm run build
+   6. Set output directory: dist
+   7. Click "Save and Deploy"
+
+═══════════════════════════════════════════════════════
+
+✨ Your app will be live at:
+   https://accounting-app.pages.dev
+
+═══════════════════════════════════════════════════════
+
+Need help? Check DEPLOYMENT-GUIDE.md for detailed instructions.

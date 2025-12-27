@@ -1,0 +1,70 @@
+===========================================
+ MANUAL DEPLOYMENT STEPS - COPY & PASTE
+===========================================
+
+OPTION 1: Double-click "DEPLOY-NOW.bat" in your project folder
+          (This will open a new PowerShell with the automated script)
+
+OR
+
+OPTION 2: Manual Steps (Copy & Paste each command)
+---------------------------------------------------
+
+1. Open a NEW PowerShell window (Windows Key + X, then select PowerShell)
+
+2. Navigate to project:
+   cd f:\projects\accounting
+
+3. Initialize Git:
+   git init
+
+4. Configure Git (replace with your info):
+   git config user.name "Your Name"
+   git config user.email "your@email.com"
+
+5. Build the project:
+   npm run build
+
+6. Add and commit files:
+   git add .
+   git commit -m "Initial commit - Accounting app"
+
+7. Create a NEW repository on GitHub:
+   - Go to: https://github.com/new
+   - Name: accounting-app
+   - Do NOT initialize with README
+   - Click "Create repository"
+
+8. Push to GitHub (replace YOUR_USERNAME):
+   git remote add origin https://github.com/YOUR_USERNAME/accounting-app.git
+   git branch -M main
+   git push -u origin main
+
+9. Deploy to Cloudflare Pages:
+   - Go to: https://dash.cloudflare.com/
+   - Click "Workers & Pages" → "Pages"
+   - Click "Connect to Git"
+   - Select GitHub and authorize
+   - Select your "accounting-app" repository
+   - Build settings:
+     * Build command: npm run build
+     * Build output: dist
+   - Click "Save and Deploy"
+
+10. DONE! Your app will be at:
+    https://accounting-app.pages.dev
+
+===========================================
+           TROUBLESHOOTING
+===========================================
+
+Git not found?
+→ Close PowerShell and open a NEW one
+
+GitHub authentication needed?
+→ You may need to sign in to GitHub in your browser
+
+Build fails on Cloudflare?
+→ Check that "dist" folder contains index.html locally
+
+===========================================
